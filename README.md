@@ -1,5 +1,5 @@
 Student Performance and Result Analytics
-README
+
 Project Overview
 The Student Performance and Result Analytics project is designed to analyze student marks, calculate results, identify subject-wise performance, and visualize insights using Python, Pandas, and Matplotlib.
 
