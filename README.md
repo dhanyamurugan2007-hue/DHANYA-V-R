@@ -15,33 +15,38 @@ Compare performance across subjects.
 
 Data Workflow
 
-Step 1: Data Collection
+Step 1: 
+        Data Collection
         Create or import student marks data from:
         Excel (.xlsx)
         CSV (.csv)
         Manual entry
 
-Step 2: Data Loading
+Step 2: 
+        Data Loading
         Load data using Pandas.
         import pandas as pd
 
 df = pd.read_csv("students.csv")
 
-Step 3: Data Preprocessing
+Step 3: 
+        Data Preprocessing
         Check missing values.
         Verify data types.
         Clean incorrect entries.  
         
 df.isnull().sum()
 
-Step 4: Calculate Performance Metrics
+Step 4: 
+        Calculate Performance Metrics
         Total Marks
         df["Total"] = df["Java"] + df["Python"] + df["Biometrics"]
         Average Marks
         
 df["Average"] = df["Total"] / 3
 
-Step 5: Grade Calculation
+Step 5: 
+        Grade Calculation
         Average Marks Grade
         90+	A+
         80-89	A
@@ -49,13 +54,15 @@ Step 5: Grade Calculation
         60-69	C
         Below 60	D
 
-Step 6: Pass/Fail Status
+Step 6: 
+        Pass/Fail Status
         df["Result"] = df[["Java","Python","Biometrics"]].apply(
         lambda x: "Pass" if all(x >= 40) else "Fail",
         axis=1
         )
 
-Step 7: Subject-wise Analysis
+Step 7: 
+       Subject-wise Analysis
 Calculate:
         Highest score
         Lowest score
@@ -64,7 +71,8 @@ Calculate:
                            ["mean","max","min"]
                            )
 
-Step 8: Visualization Dashboard
+Step 8:
+       Visualization Dashboard
 
 Generate charts:
 
@@ -74,14 +82,15 @@ Pass vs Fail Analysis
 Top Performing Students
 
 Example:
+
 import matplotlib.pyplot as plt
 df[["Java","Python","Biometrics"]].mean().plot(kind="bar")
 plt.title("Subject-wise Average Marks")
 plt.show()
 
-↓
 
-Step 9: Result Comparison
+Step 9: 
+Result Comparison
 
 Compare:
 Subject-wise averages
@@ -91,7 +100,8 @@ Grade distribution
 
 ↓
 
-Step 10: Final Report
+Step 10: 
+Final Report
 
 Output:
 
